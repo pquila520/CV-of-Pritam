@@ -1,0 +1,676 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My CV</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet"> -->
+    <!-- <link rel="stylesheet" href="style.css"> -->
+</head>
+
+
+<style>
+
+
+
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background: #A8A7A7;
+  font-size: 14px;
+  line-height: 22px;
+  color: #000000;
+}
+
+.bold {
+  font-weight: 700;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.semi-bold {
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.resume {
+  width: 800px;
+  height: auto;
+  display: flex;
+  margin: 50px auto;
+}
+
+.resume .resume_left {
+  width: 280px;
+  background: #363636;
+}
+
+.resume .resume_left .resume_profile {
+  width: 100%;
+  height: 280px;
+
+}
+
+.resume .resume_left .resume_profile img {
+  width: 100%;
+  height: 100%; 
+}
+
+.resume .resume_left .resume_content {
+  padding: 0 25px;
+}
+
+.resume .title {
+  margin-bottom: 20px;
+}
+
+.resume .resume_left .bold {
+  color: #fff;
+}
+
+.resume .resume_left .regular {
+  color: #a9ecce ;
+}
+
+.resume .resume_item {
+  padding: 25px 0;
+  border-bottom: 2px solid #07689F;
+}
+
+.resume .resume_left .resume_item:last-child,
+.resume .resume_right .resume_item:last-child {
+  border-bottom: 0px;
+}
+
+.resume .resume_left ul li {
+  margin-bottom: 10px;
+  align-items: center;
+}
+
+.resume .resume_left ul li:last-child {
+  margin-bottom: 0;
+}
+
+.resume .resume_left ul li .icon {
+  width: 35px;
+  height: 35px;
+  background: #fff;
+  color: #07689F;
+  border-radius: 50%;
+  margin-right: 15px;
+  font-size: 16px;
+  position: relative;
+}
+
+.resume .icon i,
+.resume .resume_right .resume_hobby ul li i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.resume .resume_left ul li .data {
+  color: #b1eaff;
+}
+
+.resume .resume_left .resume_skills ul li {
+  display: flex;
+  margin-bottom: 10px;
+  color: #b1eaff;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.resume .resume_left .resume_skills ul li .skill_name {
+  width: 25%;
+}
+
+.resume .resume_left .resume_skills ul li .skill_progress {
+  width: 60%;
+  margin: 0 5px;
+  height: 5px;
+  background: #dee2e4;
+  position: relative;
+}
+
+.resume .resume_left .resume_skills ul li .skill_per {
+  width: 15%;
+}
+
+.resume .resume_left .resume_skills ul li .skill_progress span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: rgb(189, 90, 90);
+}
+
+.resume .resume_left .resume_social .semi-bold {
+  color: #fff;
+  margin-bottom: 3px;
+}
+
+.resume .resume_right {
+  width: 520px;
+  background: #ffffff  ;
+  padding: 25px;
+}
+
+.resume .resume_right .bold {
+  color: #07689F;
+}
+
+.resume .resume_right .resume_work ul,
+.resume .resume_right .resume_education ul {
+  padding-left: 40px;
+  overflow: hidden;
+}
+
+.resume .resume_right ul li {
+  position: relative;
+}
+
+.resume .resume_right ul li .date {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.resume .resume_right ul li .info {
+  margin-bottom: 20px;
+}
+
+.resume .resume_right ul li:last-child .info {
+  margin-bottom: 0;
+}
+
+.resume .resume_right .resume_work ul li:before,
+.resume .resume_right .resume_education ul li:before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: -25px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  border: 2px solid #07689F;
+}
+
+.resume .resume_right .resume_work ul li:after,
+.resume .resume_right .resume_education ul li:after {
+  content: "";
+  position: absolute;
+  top: 14px;
+  left: -21px;
+  width: 2px;
+  height: 115px;
+  background: #07689F;
+}
+
+.resume .resume_right .resume_hobby ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+.resume .resume_right .resume_hobby ul li {
+  width: 80px;
+  height: 80px;
+  border: 2px solid #07689F;
+  border-radius: 50%;
+  position: relative;
+  color: #07689F;
+}
+
+.resume .resume_right .resume_hobby ul li i {
+  font-size: 30px;
+}
+
+.resume .resume_right .resume_hobby ul li:before {
+  content: "";
+  position: absolute;
+  top: 40px;
+  right: -52px;
+  width: 50px;
+  height: 2px;
+  background: #07689F;
+}
+
+.resume .resume_right .resume_hobby ul li:last-child:before {
+  display: none;
+}
+
+/* a:link, a:visited {
+  background-color: #f4a950;
+  color: rgb(255, 255, 255);
+  padding: 5px 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 0.3rem;
+}
+
+a:hover, a:active {
+  background-color: #f4a950; */
+
+
+  a:link {
+  color: #daaf05;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: rgb(0, 255, 234);
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgb(164, 171, 230);
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:active {
+  color: rgb(255, 94, 0);
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+
+
+</style>
+
+
+
+
+
+
+
+
+<body>
+
+  <div class="resume">
+    <div class="resume_left">
+      <div class="resume_profile">
+        <img src="P.jpg" alt="profile_pic">
+      </div>
+      <div class="resume_content">
+        
+        <div class="resume_item resume_social">
+          <div class="title">
+            <center>
+            <p class="bold"><font size="6" font color="white">PRITAM<br>KUMAR<br>QUILA</font></p>
+            </center>
+          </div>
+          <ul>
+            <li>
+            <center>
+            <p class="semi-bold"><font size="3" font color="orange"><br>ELECTRICAL ENGINEERING<br>STUDENT<br>&<br>TECHNOLOGIST</font></p>
+            </center>
+            </li>
+          </ul><br>
+        </div>
+
+        <div class="resume_item resume_info">
+          <ul>
+            <div class="title">
+            <p class="bold"><font size="3" font color="beige"><br>🌐 CONTACT</font></p>
+          </div><br>
+            <li>
+              <div class="icon">
+                <i class="fa fa-map-signs" aria-hidden="true"></i>
+              </div>
+              <div class="data">
+                <p class="semi-bold"><font color="gold">Address</font></p>
+                <p class="semi-bold"><font color="grey">VILL-KHANJADAPUR<br>P.O BARNAN, MECHEDA<br>EAST MEDINIPUR<br/>WEST BENGAL, INDIA</font></p>
+              </div>
+            </li>
+            <li>
+              <div class="icon">
+                <i class="fa fa-phone-square" aria-hidden="true"></i>
+              </div>
+              <div class="data">
+                <p class="semi-bold"><font color="gold">Contact Number</font></p>
+                <p><a href="tel:+917319270130"><p class="semi-bold"><font color="grey">+917319270130</font></a></p>
+              </div>
+            </li>
+            <li>
+              <div class="icon">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+              </div>
+              <div class="data">
+                <p class="semi-bold"><font color="gold">E-mail</font></p>
+                <p><a href="mailto:pquila520@gmail.com"><p class="semi-bold"><font color="grey">pquila520@gmail.com</font></a></p>
+              </div>
+            </li>
+            <li>
+            <div class="icon">
+                <i class="fa fa-linkedin" aria-hidden="true"></i>
+              </div>
+              <div class="data">
+                <p class="semi-bold"><font color="gold">LinkedIn</font></p>
+                <p><a href="https://www.linkedin.com/in/PRITAM KUMAR QUILA-166464212/" target="_blank"><p class="semi-bold"><font color="grey">PRITAM KUMAR QUILA</font></a></p>
+              </div>
+            </li>
+
+           <li>
+              <div class="icon">
+                <i class="fa fa-github" aria-hidden="true"></i>
+              </div>
+              <div class="data">
+                <p class="semi-bold"><font color="gold">GitHub</font></p>
+                <p><a href="https://github.com/IamPRITAM KUMAR QUILA" target="_blank"><p class="semi-bold"><font color="grey">PRITAM KUMAR QUILA</font></a></p>
+              </div>
+            </li><br>
+
+          </ul>
+        </div>
+        <div class="resume_item resume_skills">
+          <div class="title">
+            <p class="bold"><font size="3" font color="beige"><br>🌐 SKILLS</font></p><br>
+            <p class="semi-bold"><font color="gold">⚪ Technical</font></p>
+          </div>
+          <ul>
+            <li>
+              <div class="skill_name">
+               <p class="semi-bold"><font color="grey">⚫HTML CSS JavaScript</font></p>
+              </div>
+              <div class="skill_progress">
+                <span style="width: 70%;"></span>
+              </div>
+              <div class="skill_per">70%</div>
+            </li>
+            <li>
+              <div class="skill_name">
+                <p class="semi-bold"><font color="grey">⚫C Python Java</font></p>
+              </div>
+              <div class="skill_progress">
+                <span style="width: 72%;"></span>
+              </div>
+              <div class="skill_per">72%</div>
+            </li>
+            <li>
+              <div class="skill_name">
+                <p class="semi-bold"><font color="grey">⚫EE           Subjects</font></p>
+              </div>
+              <div class="skill_progress">
+                <span style="width: 80%;"></span>
+              </div>
+              <div class="skill_per">80%</div>
+            </li><br>
+            <p class="semi-bold"><font color="gold">⚪ General</font></p><br>
+            <li>
+              <div class="skill_name">
+                <p class="semi-bold"><font color="grey">⚫Communication</font></p>
+                <br><br>
+              </div>
+              <div class="skill_progress">
+                <span style="width: 90%;"></span>
+              </div>
+              <div class="skill_per">90%</div>
+            </li>
+            <li>
+              <div class="skill_name">
+                <p class="semi-bold"><font color="grey">⚫Adaptibility</font></p>
+                <br><br>
+              </div>
+              <div class="skill_progress">
+                <span style="width: 93%;"></span>
+              </div>
+              <div class="skill_per">90%</div>
+            </li>
+            <li>
+              <div class="skill_name">
+                <p class="semi-bold"><font color="grey">⚫Learning</font></p>
+                <br><br>
+              </div>
+              <div class="skill_progress">
+                <span style="width: 90%;"></span>
+              </div>
+              <div class="skill_per">90%</div>
+            </li>
+          </ul>
+        </div>
+        <div class="resume_item resume_social">
+          <div class="data">
+            <p class="bold"><font size="3" font color="beige"><br>🌐 LANGUAGES</font></p><br>
+          </div>
+          <ul>
+            <li>
+            <p class="semi-bold"><font size="3" font color="grey">⚫ Bengali<br>⚫ Enghlish<br>⚫ Hindi<br></font></p>
+            </li>
+          </ul>
+        </div>
+        <div class="resume_item resume_social">
+          <div class="data">
+            <p class="bold"><font size="3" font color="beige"><br>🌐 Social Activities</font></p><br>
+          </div>
+          <ul>
+            <li>
+            <p class="semi-bold"><font size="3" font color="red">🔴 Blood Donation</font></p>
+            <p class="semi-bold"><font size="3" font color="grey">⚫ Relief Works</font></p>
+            </li>
+          </ul><br>
+        </div>
+       <div class="resume_item resume_hobby">
+       <div class="title">
+            <p class="semi-bold"><font size="3" font color="beige"><br>🌐 HOBBIES</p></font>
+          </div>
+        <ul>
+          <li>
+            <p class="semi-bold"><font size="3" font color="grey">⚫ Reading<br>⚫ Travelling<br>⚫ Playing<br>⚫ Listening to Music</font></p>
+            </li>
+       </ul><br>
+     </div>
+
+      <div class="resume_item resume_thanks">
+          <div class="data"><br>
+            <center>
+            <p class="bold"><font size="5" font color="yellow">             THANKING YOU</font></p><br>
+            <center>
+          </div>
+          
+          </div>
+      <div class="resume_item resume_end">
+          <div class="data">
+          </div>
+          <ul>
+            <li>
+            </li>
+          </ul>
+         </div>
+      </div>
+   </div>
+
+                
+   <div class="resume_right"> 
+
+     <div class="resume_item resume_work">
+     </div>
+
+     <div class="resume_item resume_about">
+         <div class="title">
+            <p class="bold"><font size="5" font color="indigo"><br>About me</p></font>
+          </div>
+
+<p><font size="5">I</font> am a properly educated, ambitious and hardworking individual, with broad skills in Engineering and Modern Technologies, Social Media and Leading or Being Part of Projects.
+
+Furthermore, I am adept at handling multiple tasks on a regular basis competently and at working and knowing new things well under pressure.
+
+My key strength is communication; building strong relationships with my colleagues in order to deliver the best results.
+
+I have done a course on Speaking Effectively that would help me in making good conversation with the clients. I'm exited to join the working industry and being a valuable addition to the company that I will work for.
+
+<br><br>Here are some of my qualities described below.</p><br>
+
+         <p>1. Able to Handle Multiple Tasks,</p>
+
+<p>2. Creative, Innovative and Imaginative in Problem Solving,</p>
+
+<p>3. Dependable, Reliable and Trust-worthy,</p>
+
+<p>4. Energetic, Organized and Flexible,</p>
+
+<p>5. Experience in Team and Time Management,</p>
+
+<p>6. Hardworking and Always Try to be Motivated,</p>
+
+<p>7. Honest, Decent and Responsible,</p>
+
+<p>8. Confidence, Consistency and Enthusiastic,</p>
+
+<p>9. Interactive, Versatile and Passionate,</p>
+
+<p>10. Good Sense of Humour, Sporting Nature and Humble Attitute.</p>
+
+<div class="resume_item resume_work">
+     </div>
+     
+     <div class="resume_item resume_education">
+       <div class="title">
+            <p class="bold"><font size="5" font color="indigo"><br>Education</p></font>
+          </div>
+       <ul>
+             <li>
+                 <div class="date">2003 - 2010</div> 
+                 <div class="info">
+                      <p class="semi-bold">Primary Education</p> 
+                   <p>Sishu Sikha Niketan - Mecheda, East medinipur <br>West Bengal Board Of Primary Education <br>(WBBPE)</p>
+                 </div>
+             </li>
+             <li>
+                 <div class="date">2010 - 2016</div> 
+                 <div class="info">
+                      <p class="semi-bold">Secondary Education</p> 
+                   <p>KOLAGHAT THERMAL POWER PLANT HIGH SCHOOL(H.S) <br>West Bengal Board Of Secondary Education <br>(WBBSE)</p>
+                 </div>
+             </li>
+             <li>
+               <div class="date">2016 - 2018</div>
+               <div class="info">
+                      <p class="semi-bold">Higher Secondary Education</p> 
+                   <p>KOLAGHAT THERMAL POWER PLANT HIGH SCHOOL(H.S) <br>West Bengal Council of Higher Secondary Education <br>(WBCHSE)</p>
+                 </div>
+             </li>
+             <li>
+              <div class="date">2018 - 2022 (Present)</div>
+              <div class="info">
+                     <p class="semi-bold">B.Tech Electrical Engineering</p> 
+                  <p>St. Thomas' College of Engineering & Technology - Kolkata<br>Maulana Abul Kalam Azad University of Technology <br>(MAKAUT)</p>
+                </div>
+            </li>
+            <li>
+              <div class="date">2019</div>
+              <div class="info">
+                     <p class="semi-bold">Online Certification Course on 'GENDER JUSTICE'</p> 
+                     <p>National Programme on Technology Enhanced Learning<br>Ministry of Human Resource Development,<br>Government of India</p>
+                     
+                </div>
+            </li>
+            <li>
+              <div class="date">2021</div>
+              <div class="info">
+                     <p class="semi-bold">Training on 'Python Basics & Beyond'</p> 
+                     <p>Nullstacks Technologies - Kolkata</p>
+                     
+                </div>
+            </li>
+            <li>
+              <div class="date">2021</div>
+              <div class="info">
+                     <p class="semi-bold">Training on 'Fundamental Industrial Electrical Skills'</p> 
+                     <p>Tata Power Skill Development Institute - Jojobera</p>
+                </div>
+            </li>
+            <li>
+              <div class="date">Ongoing</div>
+              <div class="info">
+                     <p class="semi-bold">Training on 'Power System Overview'</p> 
+                     <p>Tata Power Skill Development Institute - Jojobera</p>
+                </div>
+            </li>
+            <li>
+              <div class="date">Ongoing</div>
+              <div class="info">
+                     <p class="semi-bold">Digital Nurture</p> 
+                     <p>Cognizant Technology Solutions<br><br></p>
+                </div>
+            </li>
+         </ul>
+     </div>
+     </div>
+
+     <div class="resume_item resume_work">
+         <div class="title">
+            <p class="bold"><font size="5" font color="indigo"><br>Seminars & Webinars</p></font>
+          </div>
+         <ul>
+             <li>
+                
+                 <div class="info">
+                      <p class="semi-bold">Seminar on<br><font color="green">'Renewable Energy'</font></p>
+                      <p>Students' Chapter (Electrical),<br>St. Thomas' College of Engineering & Technology - Kolkata<br>The Institute of Engineers (India)</p>
+                 </div>
+             </li><br>
+             <li>
+                
+                 <div class="info">
+                      <p class="semi-bold">Webinar on<br><font color="green">'Trends in Future Power Systems and its Relevance in the Indian Scenario'</font></p> 
+                      <p>Department of Electrical Engineering,<br>St. Thomas' College of Engineering & Technology - Kolkata<br>Institute of Electrical & Electronics Engineers - Kolkata</p>
+                 </div>
+             </li>
+             <li>
+
+               <div class="info">
+                      <p class="semi-bold">Webinar on<br><font color="green">'ENTREPRENEURSHIP'</font></p> 
+                      <p>Department of Electrical Engineering,<br>St. Thomas' College of Engineering & Technology - Kolkata<br>Institute of Electrical & Electronics Engineers - Kolkata</p>
+                 </div>
+             </li>
+             <li>
+
+               <div class="info">
+                      <p class="semi-bold">Webinar on<br><font color="green">'Software Engineering & Object Oriented Programming'</font></p>
+                      <p>Cognizant Technology Solutions - Digital Nurture</p>
+                 </div>
+             </li>
+             <li>
+               
+               <div class="info">
+                      <p class="semi-bold">Webinar on<br><font color="green">'Web Technologies'</font></p>
+                      <p>Cognizant Technology Solutions - Digital Nurture</p>
+                 </div>
+             </li>
+             <li>
+              
+              <div class="info">
+                     <p class="semi-bold">Webiner on<br><font color="green">'Relational DataBase Management System'</font></p>
+                     <p>Cognizant Technology Solutions - Digital Nurture</p>
+                </div>
+            </li>
+            <li>
+              
+              <div class="info">
+                     <p class="semi-bold">Webiner on<br><font color="green">'Java'</font></p> 
+                     <p>Cognizant Technology Solutions - Digital Nurture<br><br></p>
+                </div>
+            </li>
+         </ul>
+     </div>
+
+     <div class="resume_item resume_work">
+     </div>
+
+   </div>
+ </div>
